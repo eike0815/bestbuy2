@@ -102,3 +102,21 @@ class LimitedProduct(Product):
 
         def show(self):
             return f"Name: {self.name}, Price: {self.price}, Quantity: {self.quantity}, Maximum: {self.maximum}"
+
+
+        def is_active(self):
+            if self.quantity <= self.maximum:
+                self.deactivate()
+            else:
+                self.activate()
+            return self.active
+
+
+        def activate(self):
+            self.active = True
+            return self.active
+
+
+        def deactivate(self):
+            self.active = False
+            return self.active
