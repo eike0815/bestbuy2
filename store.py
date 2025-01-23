@@ -1,6 +1,5 @@
 import products
 
-
 class Store:
     def __init__(self, product_list):
         self.product_list = product_list
@@ -55,3 +54,4 @@ class Store:
                         return
         print("*********")
         print(f"Order made! Total payment: ${Store.total}")
+

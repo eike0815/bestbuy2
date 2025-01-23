@@ -1,4 +1,5 @@
 import products
+import promotions
 import store
 
 #products, productlist and shop class are initialised.
@@ -10,6 +11,12 @@ pro_list = [ products.Product("MacBook Air M2", price=1450, quantity=100),
                ]
 best_buy = (store.Store(pro_list))
 
+second_half_price = promotions.SecondHalfPrice("Second Half price!")
+third_one_free = promotions.ThirdOneFree("Third One Free!")
+thirty_percent = promotions.PercentDiscount("30% off!", percent=10)
+
+pro_list[2].set_promotion(second_half_price)
+#print(pro_list[0].set_promotion(thirty_percent))
 
 def menu():
     """
@@ -36,6 +43,7 @@ def ordering():
             article = input("which product # do you want? ")
             amount = input("what amount do you want? ")
             if amount == "" and article == "":
+                print(shopping_list[0][0].name)
                 best_buy.order(shopping_list)
                 break
             else:
@@ -66,7 +74,7 @@ def manual():
             else:
                 forefill_user_wish = decision_list[user_wish - 1]
                 forefill_user_wish()
-        except ValueError:
+        except IndexError:
             print("please enter a valid number between 1 and 4.")
 
 

@@ -17,8 +17,9 @@ class SecondHalfPrice(Promotion):
         super().__init__(name)
 
 
-    def apply_promotion(selfself, product, quantity):
+    def apply_promotion(self, product, quantity):
         discounted_price =  ((quantity // 2) * product.price * 0.5) + ((quantity - (quantity //2))* product.price)
+        print("here")
         return discounted_price
 """
     def apply_promotion(product):
@@ -34,6 +35,7 @@ class SecondHalfPrice(Promotion):
 class ThirdOneFree(Promotion):
     def __init__(self, name= "Buy 2, Get 1 Free"):
         super().__init__(name)
+
         #Buy2, get 1 free
 
 
@@ -54,6 +56,7 @@ class PercentDiscount(Promotion):
         #Percentagediscount(i.e.20 % off)
 
     def apply_promotion(self, product, quantity):
+        print("here")
         discounted_price = product.price * quantity *(1 - self.percent/100)
         return discounted_price
 """
