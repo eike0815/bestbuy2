@@ -1,6 +1,12 @@
 import pytest
 import products
 
+"""
+this file is testing all the functions of the product class. 
+the names of the test-functions are chosen, 
+to explain what their purpose is and to avoid (over) commenting here.  
+"""
+
 def test_creating_general_product():
     product = products.Product("MacBook Air M2", price=1450, quantity=100)
     assert product.name == "MacBook Air M2"

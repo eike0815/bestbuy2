@@ -16,7 +16,6 @@ third_one_free = promotions.ThirdOneFree("Third One Free!")
 thirty_percent = promotions.PercentDiscount("30% off!", percent=10)
 
 pro_list[2].set_promotion(second_half_price)
-#print(pro_list[0].set_promotion(thirty_percent))
 
 def menu():
     """
@@ -84,4 +83,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

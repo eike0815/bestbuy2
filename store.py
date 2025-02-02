@@ -2,19 +2,32 @@ import products
 
 class Store:
     def __init__(self, product_list):
+        """
+        this function initialises the object belonging to the class,
+        as parameter it needs a lost of products.
+        """
         self.product_list = product_list
 
 
     def add_product(self, product):
+        """
+        this function adds a new product to the product-list
+        """
         products.product = product
         self.product_list.append(product)
 
 
     def remove_product(self, product):
+        """
+        this function removes a product from the product-list
+        """
         self.product_list.remove(product)
 
 
-    def get_total_quantity(self):# -> int
+    def get_total_quantity(self):
+        """
+        this function prints the total quantity of all products together to the screen
+        """
         total = 0
         for product in range(len(self.product_list)):
             total += self.product_list[product].quantity
